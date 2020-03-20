@@ -1,0 +1,40 @@
+---
+title: "Modelo espacialmente explícito COVID19"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(tidyverse)
+library(sf)
+```
+
+## Introducción
+
+Este repositorio tiene los datos y códigos necesarios para generar el modelo espacialmente explicito para la propagación del COVID19 en chile, a continuación se describen los distintos archivos que hay en el repositorio.
+
+## Bases de datos
+
+### Comunas
+
+Simple feature obtenido de los archivos de la biblioteca nacional con los poligonos de cada comuna, mas la población de cada una de acuerdo al último censo
+
+```{r}
+Comunas <- read_rds("Comunas.rds")
+ggplot() + geom_sf(data = Comunas, aes(fill = Poblacion), size = 0.05) + theme_bw() + scale_fill_gradient2(mid =200000,label = scales::comma)
+```
+
+
+### Regiones
+
+Simple feature obtenido de los archivos de la biblioteca nacional con los poligonos de cada Región, mas la población de cada una de acuerdo al último censo
+
+```{r}
+Regiones <- read_rds("Regiones.rds")
+ggplot() + geom_sf(data = Regiones, aes(fill = Poblacion), size = 0.05) + theme_bw() + scale_fill_gradient2(mid =2000000,label = scales::comma)
+```
+
+
+## Modelos
+
+## Outputs

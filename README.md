@@ -24,6 +24,8 @@ Simple feature obtenido de los archivos de la biblioteca nacional con
 los poligonos de cada Región, mas la población de cada una de acuerdo al
 último censo
 
+![](README_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
+
 ## Modelos
 
 ## Outputs
