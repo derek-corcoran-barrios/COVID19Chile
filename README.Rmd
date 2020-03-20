@@ -7,6 +7,7 @@ output: github_document
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 library(tidyverse)
 library(sf)
+library(kableExtra)
 ```
 
 ## Introducción
@@ -24,13 +25,26 @@ Simple feature obtenido de los archivos de la biblioteca nacional con los poligo
 
 Simple feature obtenido de los archivos de la biblioteca nacional con los poligonos de cada Región, mas la población de cada una de acuerdo al último censo, el número de infectados al 19 de marzo y la prevalencia calculada según ambos valores
 
-```{r}
+```{r Mapa}
 Regiones <- read_rds("Regiones.rds")
-ggplot() + geom_sf(data = Regiones, aes(fill = Prevalencia*100000), size = 0.05) + theme_bw() + scale_fill_gradient2(high = scales::muted("red"), low = scales::muted("blue") ,midpoint =  2,label = scales::comma) + ggtitle("Prevaliencia cada 100,000 habitantes")
+ggplot() + geom_sf(data = Regiones, aes(fill = Prevalencia*100000), size = 0.05) + theme_bw() + scale_fill_gradient2(high = scales::muted("red"), low = scales::muted("blue") ,midpoint =  2,label = scales::comma, name = "Prevalencia") + ggtitle("Prevalencia cada 100,000 habitantes")
 ```
 
-##### Regiones.rds
+##### Viajes_Regiones.rds
+
+data.frame con el numero de viajes promedio realizados entre regiones por día, sacado de un promedio de 21 días. El script para genererlo es `MigracionRegion.R`. A continuación vemos las primeras 20 entradas en una tabla.
+
+```{r Tabla}
+Viajes <- read_rds("Viajes_Regiones.rds")
+
+knitr::kable(head(Viajes, 20), digits = 2, format = "markdown")
+```
+
+
+
 
 ## Modelos
+
+
 
 ## Outputs
