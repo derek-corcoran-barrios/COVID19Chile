@@ -63,31 +63,27 @@ data.frame con el numero de viajes promedio realizados entre regiones por día, 
 
 ### Lineas de tiempo de infección
 
-![plot of chunk unnamed-chunk-1](figure/unnamed-chunk-1-1.png)
+
+```
+## Error in dmy("17-03-2020"): could not find function "dmy"
+```
+
+```
+## Error in ggplot(Results2, aes(x = Time, y = Proporcion)): object 'Results2' not found
+```
 
 
 ### Tablas con peaks de infección
 
 
 
-|Region                                    |Time       | Proporcion_Infectados|
-|:-----------------------------------------|:----------|---------------------:|
-|Región de Antofagasta                     |2020-05-23 |                  0.40|
-|Región de Arica y Parinacota              |2020-06-19 |                  0.40|
-|Región de Atacama                         |2020-05-21 |                  0.41|
-|Región de Aysén del Gral.Ibañez del Campo |2020-06-05 |                  0.40|
-|Región de Coquimbo                        |2020-05-25 |                  0.40|
-|Región de La Araucanía                    |2020-05-21 |                  0.40|
-|Región de Los Lagos                       |2020-05-16 |                  0.40|
-|Región de Los Ríos                        |2020-06-10 |                  0.40|
-|Región de Magallanes y Antártica Chilena  |2020-05-17 |                  0.40|
-|Región de Ñuble                           |2020-05-11 |                  0.40|
-|Región de Tarapacá                        |2020-06-11 |                  0.40|
-|Región de Valparaíso                      |2020-05-28 |                  0.40|
-|Región del Bío-Bío                        |2020-05-20 |                  0.40|
-|Región del Libertador Bernardo O'Higgins  |2020-05-26 |                  0.40|
-|Región del Maule                          |2020-05-18 |                  0.40|
-|Región Metropolitana de Santiago          |2020-05-13 |                  0.40|
+```
+## Error in eval(lhs, parent, parent): object 'Results2' not found
+```
+
+```
+## Error in knitr::kable(Maxs, digits = 2, format = "markdown"): object 'Maxs' not found
+```
 
 
 
