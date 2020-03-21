@@ -6,7 +6,7 @@ Viajes_Regiones <- read_rds("Viajes_Regiones.rds") %>% dplyr::filter(n_personas 
 
 beta = 0.6
 gamma = 0.1
-Times = 20
+Times = 30
 
 
 df_out <- Regiones %>% as.data.frame() %>% select(Region, Poblacion, Infectados) %>% mutate(Infectados = ifelse(is.na(Infectados), 0, Infectados),Suceptibles = Poblacion -Infectados , Recuperados = 0) %>% dplyr::select(Region, Suceptibles, Infectados, Recuperados) %>% mutate(Total = Suceptibles + Infectados + Recuperados, Time = 1)
@@ -33,4 +33,14 @@ for(i in 2:Times){
 
 Results <- bind_rows(Results) 
 
+Results2 <- Results %>% dplyr::select(Region, Time, Prop_I, Prop_S, Prop_R) %>% pivot_longer(starts_with("Prop"), names_to = "Grupo", values_to = "Proporcion") %>% dplyr::filter(Grupo != "Prop_S")
+
 ggplot(Results, aes(x = Time, y = Prop_I)) + geom_line() + facet_wrap(~Region) + theme_classic()
+
+ggplot(Results2, aes(x = Time, y =Proporcion)) + geom_line(aes(color = Grupo)) + facet_wrap(~Region) + theme_classic()
+
+
+
+Regiones <- read_rds("Regiones.rds") %>% dplyr::filter(Region != "Zona sin demarcar") %>% dplyr::select(-Infectados, -Prevalencia) %>% full_join(Results) %>% dplyr::filter(Time %in% c(1, 15, 30))
+
+ggplot() + geom_sf(aes(fill = )) + facet_wrap(~Region) + theme_classic()
