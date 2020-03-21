@@ -48,3 +48,14 @@ knitr::kable(head(Viajes, 20), digits = 2, format = "markdown")
 
 
 ## Outputs
+
+```{r}
+library(tidyverse)
+library(sf)
+
+Regiones <- read_rds("RegionesResults.rds")
+
+
+ggplot() + geom_sf(data = Regiones ,aes(fill = Prop_I)) + facet_wrap(~Time) + theme_bw() + scale_fill_gradient2(high = scales::muted("red"), low = scales::muted("blue") ,midpoint =  0.2,label = scales::comma, name = "Prevalencia") 
+```
+

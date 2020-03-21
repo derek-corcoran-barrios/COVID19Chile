@@ -35,12 +35,28 @@ Results <- bind_rows(Results)
 
 Results2 <- Results %>% dplyr::select(Region, Time, Prop_I, Prop_S, Prop_R) %>% pivot_longer(starts_with("Prop"), names_to = "Grupo", values_to = "Proporcion") %>% dplyr::filter(Grupo != "Prop_S")
 
-ggplot(Results, aes(x = Time, y = Prop_I)) + geom_line() + facet_wrap(~Region) + theme_classic()
+#ggplot(Results, aes(x = Time, y = Prop_I)) + geom_line() + facet_wrap(~Region) + theme_classic()
 
-ggplot(Results2, aes(x = Time, y =Proporcion)) + geom_line(aes(color = Grupo)) + facet_wrap(~Region) + theme_classic()
+#ggplot(Results2, aes(x = Time, y =Proporcion)) + geom_line(aes(color = Grupo)) + facet_wrap(~Region) + theme_classic()
 
 
 
-Regiones <- read_rds("Regiones.rds") %>% dplyr::filter(Region != "Zona sin demarcar") %>% dplyr::select(-Infectados, -Prevalencia) %>% full_join(Results) %>% dplyr::filter(Time %in% c(1, 15, 30))
 
-ggplot() + geom_sf(aes(fill = )) + facet_wrap(~Region) + theme_classic()
+#saveRDS(Regiones, "RegionesResults.rds")
+
+library(tidyverse)
+library(sf)
+
+library(animation)
+
+Results <- read_rds("Results.rds")
+Results <- bind_rows(Results) 
+
+saveGIF(
+  for(i in c(1,10, 20,30)){
+    Results3 <- Results %>% dplyr::filter(Time == i)
+    Regiones <- read_rds("Regiones.rds") %>% st_transform(crs = 4326) %>% dplyr::filter(Region != "Zona sin demarcar") %>% dplyr::select(-Infectados, -Prevalencia) %>% full_join(Results3)
+    print(ggplot() + geom_sf(data = Regiones ,aes(fill = Prop_I)) + theme_bw() + scale_fill_gradient2(high = scales::muted("red"), low = scales::muted("blue") ,midpoint =  0.2,label = scales::comma, name = "Proporción", limits = c(0,0.6)) + xlim(c(-80,-66.42)) + ggtitle(paste("Proporción de infectados día", i)))
+  }
+, "Test2.gif")
+
