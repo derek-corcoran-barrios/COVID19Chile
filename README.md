@@ -69,21 +69,22 @@ una tabla.
 
 | Region                                    | Time       | Proporcion\_Infectados |
 | :---------------------------------------- | :--------- | ---------------------: |
-| Región de Antofagasta                     | 2020-05-23 |                   0.40 |
-| Región de Arica y Parinacota              | 2020-06-19 |                   0.40 |
-| Región de Atacama                         | 2020-05-21 |                   0.41 |
-| Región de Aysén del Gral.Ibañez del Campo | 2020-06-05 |                   0.40 |
-| Región de Coquimbo                        | 2020-05-25 |                   0.40 |
-| Región de La Araucanía                    | 2020-05-21 |                   0.40 |
-| Región de Los Lagos                       | 2020-05-16 |                   0.40 |
-| Región de Los Ríos                        | 2020-06-10 |                   0.40 |
-| Región de Magallanes y Antártica Chilena  | 2020-05-17 |                   0.40 |
-| Región de Ñuble                           | 2020-05-11 |                   0.40 |
-| Región de Tarapacá                        | 2020-06-11 |                   0.40 |
-| Región de Valparaíso                      | 2020-05-28 |                   0.40 |
-| Región del Bío-Bío                        | 2020-05-20 |                   0.40 |
-| Región del Libertador Bernardo O’Higgins  | 2020-05-26 |                   0.40 |
-| Región del Maule                          | 2020-05-18 |                   0.40 |
-| Región Metropolitana de Santiago          | 2020-05-13 |                   0.40 |
+| Región de Antofagasta                     | 2020-06-23 |                   0.33 |
+| Región de Arica y Parinacota              | 2020-03-18 |                   0.00 |
+| Región de Arica y Parinacota              | 2020-03-19 |                   0.00 |
+| Región de Atacama                         | 2020-06-07 |                   0.34 |
+| Región de Aysén del Gral.Ibañez del Campo | 2020-06-25 |                   0.26 |
+| Región de Coquimbo                        | 2020-04-09 |                   0.00 |
+| Región de La Araucanía                    | 2020-06-08 |                   0.33 |
+| Región de Los Lagos                       | 2020-06-02 |                   0.33 |
+| Región de Los Ríos                        | 2020-06-25 |                   0.25 |
+| Región de Magallanes y Antártica Chilena  | 2020-05-15 |                   0.00 |
+| Región de Ñuble                           | 2020-05-25 |                   0.33 |
+| Región de Tarapacá                        | 2020-06-25 |                   0.13 |
+| Región de Valparaíso                      | 2020-06-18 |                   0.33 |
+| Región del Bío-Bío                        | 2020-06-06 |                   0.33 |
+| Región del Libertador Bernardo O’Higgins  | 2020-03-27 |                   0.00 |
+| Región del Maule                          | 2020-06-05 |                   0.33 |
+| Región Metropolitana de Santiago          | 2020-05-29 |                   0.33 |
 
 ![](Test2.gif)<!-- -->
