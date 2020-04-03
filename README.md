@@ -34,26 +34,26 @@ una tabla.
 
 | origen                                   | destino                                  | n\_personas |
 | :--------------------------------------- | :--------------------------------------- | ----------: |
+| Región Metropolitana de Santiago         | Región Metropolitana de Santiago         |  2675058.81 |
+| Región de Valparaíso                     | Región de Valparaíso                     |   377275.14 |
+| Región del Libertador Bernardo O’Higgins | Región del Libertador Bernardo O’Higgins |   267375.19 |
+| Región del Bío-Bío                       | Región del Bío-Bío                       |   195334.00 |
+| Región de La Araucanía                   | Región de La Araucanía                   |   144441.86 |
+| Región del Maule                         | Región del Maule                         |   142386.00 |
+| Región de Coquimbo                       | Región de Coquimbo                       |   100768.43 |
+| Región de Los Lagos                      | Región de Los Lagos                      |    92601.90 |
+| Región de Ñuble                          | Región de Ñuble                          |    75999.29 |
+| Región de Los Ríos                       | Región de Los Ríos                       |    32448.67 |
 | Región de Valparaíso                     | Región Metropolitana de Santiago         |    27176.10 |
 | Región Metropolitana de Santiago         | Región de Valparaíso                     |    26876.81 |
+| Región de Atacama                        | Región de Atacama                        |    23237.86 |
+| Región de Tarapacá                       | Región de Tarapacá                       |    21928.19 |
 | Región Metropolitana de Santiago         | Región del Libertador Bernardo O’Higgins |    20039.00 |
 | Región del Libertador Bernardo O’Higgins | Región Metropolitana de Santiago         |    19877.19 |
+| Región de Antofagasta                    | Región de Antofagasta                    |    18892.10 |
 | Región Metropolitana de Santiago         | Región de Atacama                        |    13219.24 |
 | Región de Atacama                        | Región Metropolitana de Santiago         |    11941.95 |
 | Región del Libertador Bernardo O’Higgins | Región del Maule                         |    10899.86 |
-| Región de Ñuble                          | Región del Bío-Bío                       |    10309.14 |
-| Región del Maule                         | Región del Libertador Bernardo O’Higgins |    10300.38 |
-| Región del Bío-Bío                       | Región de Ñuble                          |     9997.76 |
-| Región del Libertador Bernardo O’Higgins | Región de Atacama                        |     7452.90 |
-| Región de Atacama                        | Región del Libertador Bernardo O’Higgins |     7330.76 |
-| Región del Maule                         | Región de Ñuble                          |     6617.57 |
-| Región de Antofagasta                    | Región de Atacama                        |     6193.43 |
-| Región de Atacama                        | Región de Antofagasta                    |     6190.33 |
-| Región de Ñuble                          | Región del Maule                         |     6186.14 |
-| Región de Los Lagos                      | Región de Los Ríos                       |     5268.05 |
-| Región de Los Ríos                       | Región de Los Lagos                      |     5208.00 |
-| Región de La Araucanía                   | Región del Bío-Bío                       |     4908.90 |
-| Región del Bío-Bío                       | Región de La Araucanía                   |     4763.05 |
 
 ![](README_files/figure-gfm/red-1.png)<!-- -->
 

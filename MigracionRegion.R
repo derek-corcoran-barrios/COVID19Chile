@@ -26,7 +26,7 @@ for(i in 1:nrow(Comunas)){
 }
 
 
-Viajes <- Viajes %>% group_by(origen, destino) %>% summarise(n_personas = sum(n)) %>% ungroup() %>% dplyr::filter(origen != destino) %>% arrange(desc(n_personas))
+Viajes <- Viajes %>% group_by(origen, destino) %>% summarise(n_personas = sum(n)) %>% ungroup()  %>% arrange(desc(n_personas))
 
 saveRDS(Viajes, "Viajes_Regiones.rds")
 
